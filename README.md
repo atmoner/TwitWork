@@ -1,2 +1,2 @@
 # TwitWork
-Monitor twitter live
+Monitor twitter stream
