@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <title>TwitWork</title>
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <link rel="stylesheet" href="css/uikit.min.css" />
+      <script src="js/uikit.min.js"></script>
+      <script src="js/uikit-icons.min.js"></script>
+			<style type="text/css">
+				#mynetwork {
+					width: 950px;
+					height: 370px;
+		 
+				}
+				*:focus {
+					outline: 0;
+				}
+			</style>
+</head>
+<body>
+ 
+<div class="uk-position-top">
+	<a href="#" uk-toggle="target: #offcanvas-nav"><span class="uk-margin-small-right" uk-icon="icon: table"></span></a>
+</div>
+
+<div id="offcanvas-nav" uk-offcanvas="mode: reveal; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <ul class="uk-nav uk-nav-default">
+            <li class="uk-nav-header">TwitWork</li>
+            <li><a href="#" id="openPro"><span class="uk-margin-small-right" uk-icon="icon: push"></span> Save this track</a></li>
+            <li><a href="#" id="openPro"><span class="uk-margin-small-right" uk-icon="icon: pull"></span> Add new track</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="#" id="openApi"><span class="uk-margin-small-right" uk-icon="icon: code"></span>Twitter Api key</a></li>              
+            <li><a href="#" id="openSettings"><span class="uk-margin-small-right" uk-icon="icon: settings"></span> Settings</a></li>          
+            <li class="uk-nav-divider"></li>
+            <li><a id="githubHelp"><span class="uk-margin-small-right" uk-icon="icon: question"></span> Help</a></li>
+						<br /><br />
+						<a id="twitterAtmon3r" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
+						<a id="TwitWorkGithub" class="uk-icon-button  uk-margin-small-right" uk-icon="github"></a> 
+        </ul>
+
+    </div>
+</div>
+<div class="uk-container" id="all"><br />
+ <input class="uk-input uk-form-width-medium" type="text" placeholder="#hastag or @user" value="bfmtv" id="searchBox">
+<button class="uk-button uk-button-primary " id="startStream" type="button"><span class="uk-margin-small-right" uk-icon="icon: play"></span> Start</button>
+<button class="uk-button uk-button-danger" id="stopStream" type="button" style="display: none;"><span class="uk-margin-small-right" uk-icon="icon: ban"></span> Stop</button> 
+<button class="uk-button uk-button-primary " id="saveScreen" type="button"><span class="uk-margin-small-right" uk-icon="icon: copy"></span> Save screen</button>
+ <br /> <br />
+  <label>
+    <div>
+      <label>
+        <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='retweeted' checked></input>
+        Is <span style="color:red">retweeted</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='quoted' checked></input>
+        Is <span style="color:green">quoted</span>
+      </label>
+    </div>
+    <div>
+      <label>
+        <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='tweet' checked></input>
+        Is <span style="color:blue">tweet</span>
+      </label>
+    </div>
+  </label>
+<div id="mynetwork"></div>
+
+<div id="detailNode" uk-modal>
+    <div class="uk-modal-dialog">
+ 
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Detail node</h2>
+        </div>
+        <div class="uk-modal-body"> 
+ 			 		<div id="returnUrlHref"></div> 
+        </div>
+ 
+    </div>
+</div>
+</div>
+<script src="./renderer.js"></script>
+
+<!-- All modal -->
+<div id="apiKeyModal" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Set your twitter api key</h2>
+        </div>
+        <div class="uk-modal-body"> 
+				
+        </div>
+        <div class="uk-modal-footer uk-text-right"> 
+            <button class="uk-button uk-button-primary" id="" type="button">Save</button>
+        </div>
+    </div>
+</div>
+<div id="openSettingsModal" uk-modal>
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Settings</h2>
+        </div>
+        <div class="uk-modal-body"> 
+				
+        </div>
+        <div class="uk-modal-footer uk-text-right"> 
+            <button class="uk-button uk-button-primary" id="" type="button">Save</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
