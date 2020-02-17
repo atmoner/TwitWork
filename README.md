@@ -1,7 +1,7 @@
 # TwitWork
 > Monitor twitter stream.
 
-![enter image description here](https://i.imgur.com/uyNHILq.jpg)
+![TwitWork](https://i.imgur.com/uyNHILq.jpg)
 
 ## Installation
 
@@ -9,6 +9,9 @@
 git clone https://github.com/atmoner/TwitWork.git
 cd TwitWork
 npm install
+```
+Open `renderer.js` and edit your variable Twitter api.
+```
 npm start
 ```
 ## Development setup
