@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "electron-reload": "^1.5.0",
+    "electron-store": "^5.1.0",
     "html-to-image": "^0.1.1",
     "jquery": "^3.4.1",
     "openurl": "^1.1.1",
@@ -34,4 +35,3 @@
     "vis-network": "^7.3.4"
   }
 }
-

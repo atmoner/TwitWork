@@ -2,20 +2,31 @@ const fs = require('fs')
 var $ = require("jquery")
 var vis = require("vis-network")
 var Twit = require('twit')
-var htmlToImage = require('html-to-image');
+var htmlToImage = require('html-to-image')
+const Store = require('electron-store')
+const store = new Store()
+  
 // Lib menu
 const mainNetwork = require('./lib/network'); 
 const menu = require('./lib/menu'); 
-menu.mainMenu();
+menu.mainMenu(store);
 
-var Twitter = new Twit({
-    consumer_key: '',
-    consumer_secret: '',
-    access_token: '',
-    access_token_secret: '',
+if (store.get('consumer_key')) { 
+	var Twitter = new Twit({
+    consumer_key: store.get('consumer_key'),
+    consumer_secret: store.get('consumer_secret'),
+    access_token: store.get('access_token'),
+    access_token_secret: store.get('access_token_secret'),
     timeout_ms: 60 * 1000,
     strictSSL: true
-})
+	})
+}	else {
+	$(function() {
+		var modal = UIkit.modal("#apiKeyModal");
+		modal.show(); 
+	});
+}
+
 
 $("#saveScreen").click(function(e){
 	var node = document.getElementById('mynetwork');
