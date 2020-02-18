@@ -27,6 +27,14 @@ if (store.get('consumer_key')) {
 	});
 }
 
+$("#clear").click(function(e){
+	try {
+		nodes.getIds().forEach(tweetId => nodes.remove({id: tweetId}));
+	}
+	catch (err) {
+		console.error(error);
+	}	
+})
 
 $("#saveScreen").click(function(e){
 	var node = document.getElementById('mynetwork');
