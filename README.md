@@ -1,6 +1,7 @@
 # TwitWork
 > Monitor twitter stream.
 
+![TwitWork](https://s5.gifyu.com/images/ezgif-6-24a9642e1e53.gif)
 ![TwitWork](https://i.imgur.com/uyNHILq.jpg)
 
 ## Installation
