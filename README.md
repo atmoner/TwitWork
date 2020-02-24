@@ -11,7 +11,7 @@ git clone https://github.com/atmoner/TwitWork.git
 cd TwitWork
 npm install
 ```
-Open `renderer.js` and edit your variable Twitter api.
+Run it
 ```
 npm start
 ```
