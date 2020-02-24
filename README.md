@@ -25,7 +25,7 @@ For the improvement of the software, do not hesitate to make your proposal in th
    - [ ] Setting
  - [x] Core
 	 - [ ] Hashtag extract
-	 - [x] Add node/edge for hashtag
+	 - [ ] Add node/edge for hashtag
  
 ## Meta
 
