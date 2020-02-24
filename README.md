@@ -1,5 +1,7 @@
 # TwitWork
 > Monitor twitter stream.
+TwitWork use the twitter stream which allows you to have a tweets in real-time.
+There is an input that allows you to filter the flow on one (or more) keywords or on an @ based on twitter tracking
 
 ![TwitWork](https://s5.gifyu.com/images/ezgif-6-24a9642e1e53.gif)
 ![TwitWork](https://i.imgur.com/Tq0RSv4.jpg)
