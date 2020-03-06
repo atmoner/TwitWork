@@ -55,6 +55,8 @@ For the improvement of the software, do not hesitate to make your proposal in th
 	 
 ## Download precompiled exe
 
+https://github.com/atmoner/TwitWork/releases
+
 | Item      | Value |
 | --------- | -----|
 | Linux  | [TwitWork-linux-x64.zip](https://github.com/atmoner/TwitWork/releases/download/V1.1/TwitWork-linux-x64.zip "TwitWork-linux-x64.zip") |
