@@ -1,14 +1,27 @@
 # TwitWork
+
+* * *
+
+*   [What is TwitWork?](#what-is-twitwork "What is TwitWork?")
+*   [Demonstration](#demonstration "Demonstration")
+*   [Require](#require "Require")
+*   [Installation](#installation "Installation")
+*   [Development setup](#development-setup "Development setup")
+*   [Download precompiled exe](#download-precompiled-exe "Download precompiled exe")
+
+
+## What is TwitWork? 
 Monitor twitter stream.  
 TwitWork use the twitter stream which allows you to have a tweets in real-time.  
 There is an input that allows you to filter the flow on one (or more) keywords or on an @ based on twitter tracking
 
-## Demo
+## Demonstration
 This is a demo of export data on keyword "Coronavirius"  
 https://twitwork.github.io/
 
 ![TwitWork](https://s5.gifyu.com/images/ezgif-6-24a9642e1e53.gif)
 ![TwitWork](https://i.imgur.com/Tq0RSv4.jpg)
+
 
 ## Require
 
@@ -31,7 +44,7 @@ npm start
   
 For the improvement of the software, do not hesitate to make your proposal in the support section 
 
-### To Do ###  
+## To Do 
  - [x] Main menu
  	 - [ ] Add/save file
 	 - [x] Edit API key
@@ -39,6 +52,14 @@ For the improvement of the software, do not hesitate to make your proposal in th
  - [x] Core
 	 - [ ] Hashtag extract
 	 - [ ] Add node/edge for hashtag
+	 
+## Download precompiled exe
+
+| Item      | Value |
+| --------- | -----|
+| Linux  | [TwitWork-linux-x64.zip](https://github.com/atmoner/TwitWork/releases/download/V1.1/TwitWork-linux-x64.zip "TwitWork-linux-x64.zip") |
+| Windows     | [TwitWork-win32-x64.zip](https://github.com/atmoner/TwitWork/releases/download/V1.1/TwitWork-win32-x64.zip "TwitWork-win32-x64.zip") |
+| Mac      |   Soon |	 
  
 ## Meta
 
