@@ -1,6 +1,5 @@
+![TwitWork](https://i.imgur.com/irBFbfu.png)  
 # TwitWork
-
-* * *
 
 *   [What is TwitWork?](#what-is-twitwork "What is TwitWork?")
 *   [Demonstration](#demonstration "Demonstration")
