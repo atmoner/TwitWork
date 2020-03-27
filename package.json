@@ -32,6 +32,6 @@
     "jquery": "^3.4.1",
     "openurl": "^1.1.1",
     "twit": "^2.2.11",
-    "vis-network": "^7.3.4"
+    "vis-network": "=7.3.4"
   }
 }
