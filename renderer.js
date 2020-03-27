@@ -6,7 +6,7 @@ var htmlToImage = require('html-to-image')
 const Store = require('electron-store')
 const store = new Store()
   
-// Lib menu
+//Lib menu
 const mainNetwork = require('./lib/network'); 
 const menu = require('./lib/menu'); 
 menu.mainMenu(store);
