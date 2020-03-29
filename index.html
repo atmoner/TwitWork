@@ -6,10 +6,15 @@
       <link rel="stylesheet" href="css/uikit.min.css" />
       <script src="js/uikit.min.js"></script>
       <script src="js/uikit-icons.min.js"></script>
+      
+		<script type="text/javascript" src="https://unpkg.com/moment@latest"></script>
+		<script type="text/javascript" src="https://unpkg.com/vis-data@latest"></script>
+		<script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/peer/umd/vis-timeline-graph2d.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/vis-timeline/styles/vis-timeline-graph2d.min.css" />      
 			<style type="text/css">
 				#mynetwork {
 					width: 950px;
-					height: 370px;
+					height: 270px;
 		 
 				}
 				*:focus {
@@ -43,33 +48,81 @@
     </div>
 </div>
 <div class="uk-container" id="all"><br />
- <input class="uk-input uk-form-width-medium" type="text" placeholder="#hastag or @user" value="bfmtv" id="searchBox">
+ <input class="uk-input uk-form-width-medium" type="text" placeholder="#hastag or @user" value="macron" id="searchBox">
 <button class="uk-button uk-button-primary " id="startStream" type="button"><span class="uk-margin-small-right" uk-icon="icon: play"></span> Start</button>
 <button class="uk-button uk-button-danger" id="stopStream" type="button" style="display: none;"><span class="uk-margin-small-right" uk-icon="icon: ban"></span> Stop</button> 
 <button class="uk-button uk-button-primary " id="saveScreen" type="button"><span class="uk-margin-small-right" uk-icon="icon: copy"></span> Save screen</button>
 <button class="uk-button uk-button-primary " id="clear" type="button"> <span class="uk-margin-small-right" uk-icon="icon: trash"></span> Clear</button>
+<button class="uk-button uk-button-primary " id="stabilize" type="button"> <span class="uk-margin-small-right" uk-icon="icon: code"></span> stabilize</button>
+<button class="uk-button uk-button-primary" id="options" type="button" uk-toggle="target: #toggle-usage">Options</button>
+<!-- <button class="uk-button uk-button-primary" id="stabilize" type="button">Stabilize</button> -->
+<button class="uk-button uk-button-primary" id="Output" type="button">Output</button>
  <br /> <br />
-  <label>
+<div uk-grid>
     <div>
-      <label>
-        <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='retweeted' checked></input>
-        Is <span style="color:red">retweeted</span>
-      </label>
+			<label id="toggle-usage" >
+				<div>
+				  <label>
+				    <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='retweeted' checked></input>
+				    Is <span style="color:red">retweeted</span> <span class="uk-badge" id="retweetStats">0</span>
+				  </label>
+				</div>
+				<div>
+				  <label>
+				    <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='quoted' checked></input>
+				    Is <span style="color:green">quoted</span> <span class="uk-badge" id="quoteStats">0</span>
+				  </label>
+				</div>
+				<div>
+				  <label>
+				    <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='tweet' checked></input>
+				    Is <span style="color:blue">tweet</span> <span class="uk-badge" id="tweetStats">0</span>
+				  </label>
+				</div>
+
+				<!--<div>
+				  <label>
+				    <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='hashtag' checked></input>
+				    Is <span style="color:yellow">hashtag</span> <span class="uk-badge" id="tweetStats">0</span>
+				  </label>
+				</div>    -->
+			</label>
+    </div>
+    <div> 
+				
+    </div>
+</div>      
+<div uk-grid>
+    <div>
+    	<div id="mynetwork"></div>
     </div>
     <div>
-      <label>
-        <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='quoted' checked></input>
-        Is <span style="color:green">quoted</span>
-      </label>
+		<table class="uk-table uk-table-small ">
+				<caption>Stats</caption>
+				<thead>
+				    <tr>
+				        <th>Key</th>
+				        <th>Value</th>
+				    </tr>
+				</thead>
+				<tbody>
+				    <tr>
+				        <td>Node</td>
+				        <td><div id="TwitNode"></div></td>
+				    </tr>
+				    <tr>
+				        <td>Edge</td>
+				        <td><div id="TwitEdge"></div></td>
+				    </tr>				    
+				</tbody>
+		</table>    
+    
+    <button class="uk-button uk-button-primary uk-margin-small-right" type="button" uk-toggle="target: #ViewHashtag">View Hashtag</button>
+       
+   	<br />    	 
     </div>
-    <div>
-      <label>
-        <input class="uk-checkbox" type='checkbox' name='edgesFilter' value='tweet' checked></input>
-        Is <span style="color:blue">tweet</span>
-      </label>
-    </div>
-  </label>
-<div id="mynetwork"></div>
+</div>  
+
 
 <div id="detailNode" uk-modal>
     <div class="uk-modal-dialog">
@@ -83,8 +136,9 @@
  
     </div>
 </div>
+
 </div>
-<script src="./renderer.js"></script>
+
 
 <!-- All modal -->
 <div id="apiKeyModal" uk-modal>
@@ -120,10 +174,10 @@
 						  <div class="uk-form-controls">
 						      <input class="uk-input" id="access_token_secret" type="password">
 						  </div>
-					</div>					
+					</div>													
         </div>
         <div class="uk-modal-footer uk-text-right"> 
-            <button class="uk-button uk-button-primary" id="testapi" type="button">Save</button>
+						<button class="uk-button uk-button-primary" id="testapi" type="button">Save</button>
         </div>
     </div>
 </div>
@@ -141,6 +195,22 @@
         </div>
     </div>
 </div>
+<div id="ViewHashtag" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Hashtag Stats</h2>
+				<table class="uk-table uk-table-divider uk-table-small">
+						<thead>
+								<tr>
+								    <th>HashTag</th>
+								    <th>Used</th>
+								</tr>
+						</thead>
+						<tbody id="returnHastag">
+						</tbody>
+				</table> 
+    </div>
+</div>
+<script src="./renderer.js"></script>
 </body>
 </html>
 
