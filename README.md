@@ -19,6 +19,8 @@ This is a demo of export data on keyword "Coronavirius"
 https://twitwork.github.io/
 
 ![TwitWork](https://s5.gifyu.com/images/ezgif-6-24a9642e1e53.gif)
+![TwitWork](https://i.imgur.com/6cz2Wls.png)
+![TwitWork](https://i.imgur.com/JfgJpq5.png)
 ![TwitWork](https://i.imgur.com/Tq0RSv4.jpg)
 
 
