@@ -56,11 +56,11 @@ For the improvement of the software, do not hesitate to make your proposal in th
 
 https://github.com/atmoner/TwitWork/releases
 
-| Item      | Value |
-| --------- | -----|
-| Linux  | [TwitWork-linux-x64.zip](https://github.com/atmoner/TwitWork/releases/download/V1.1/TwitWork-linux-x64.zip "TwitWork-linux-x64.zip") |
-| Windows     | [TwitWork-win32-x64.zip](https://github.com/atmoner/TwitWork/releases/download/V1.1/TwitWork-win32-x64.zip "TwitWork-win32-x64.zip") |
-| Mac      |   Soon |	 
+| Item      | Value | Size |
+| --------- | -----| -----|
+| Linux  | [TwitWork1.2-linux-x64.zip](https://github.com/atmoner/TwitWork/releases/download/1.2/TwitWork1.2-linux-x64.zip "TwitWork1.2-linux-x64.zip") | 80.5 MB |
+| Windows     | [TwitWork1.2-win32-x64.zip](https://github.com/atmoner/TwitWork/releases/download/V1.1/TwitWork-win32-x64.zip "TwitWork1.2-win32-x64.zip") | 79.8 MB |
+| Mac      |   [TwitWork1.2-darwin-x64.zip](https://github.com/atmoner/TwitWork/releases/download/1.2/TwitWork1.2-darwin-x64.zip "TwitWork1.2-darwin-x64.zip") | 75.8 MB |  
  
 ## Meta
 
