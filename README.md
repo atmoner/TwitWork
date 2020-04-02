@@ -45,12 +45,12 @@ For the improvement of the software, do not hesitate to make your proposal in th
 
 ## To Do 
  - [x] Main menu
- 	 - [ ] Add/save file
+ 	 - [x] Add/save file
 	 - [x] Edit API key
    - [ ] Setting
  - [x] Core
-	 - [ ] Hashtag extract
-	 - [ ] Add node/edge for hashtag
+	 - [x] Hashtag extract
+	 - [x] Add node/edge for hashtag
 	 
 ## Download precompiled exe
 
