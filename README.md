@@ -11,11 +11,11 @@
 
 ## What is TwitWork? 
 Monitor twitter stream.  
-TwitWork use the twitter stream which allows you to have a tweets in real-time.  
+TwitWork use the twitter stream which allows you to have a look at tweets in real-time.  
 There is an input that allows you to filter the flow on one (or more) keywords or on an @ based on twitter tracking
 
 ## Demonstration
-This is a demo of export data on keyword "Coronavirius"  
+This is a demo of export data on keyword "Coronavirus"  
 https://twitwork.github.io/
 
 ![TwitWork](https://s5.gifyu.com/images/ezgif-6-24a9642e1e53.gif)
@@ -24,7 +24,7 @@ https://twitwork.github.io/
 ![TwitWork](https://i.imgur.com/Tq0RSv4.jpg)
 
 
-## Require
+## Requirements
 
  - NodeJs 
  - Npm 
